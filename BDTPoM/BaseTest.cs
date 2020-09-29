@@ -17,7 +17,7 @@ namespace BDTPoM
     {
         public ExtentReports extent = ExtentManager.getInstance();
 
-        public void Setup(string browser)
+        public static void Setup(string browser)
         {
 
             test.Log(LogStatus.Info, "Chrome should be opened");

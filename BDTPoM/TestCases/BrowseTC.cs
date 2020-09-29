@@ -10,30 +10,38 @@ using System.Threading.Tasks;
 
 namespace BDTPoM.TestCases
 {
-    [TestFixture]
+    //[TestFixture]
     public class BrowseTC : BaseTest
     {
 
-        String TestCaseName = "BDT Login";
+        //String TestCaseName = "BDT Login";
 
-        [Test]
-        public void openBrowser()
+
+
+        //[Test]
+        //public void openBrowser()
+
+        static void Main(string[] args)
+
+
+
         {
+            //String TestCaseName = "BDT Login";
 
-            test = extent.StartTest(TestCaseName);
+            //test = extent.StartTest(TestCaseName);
             Setup("Chrome");
 
-            LaunchingPage l = new LaunchingPage(driver,test);
-            PageFactory.InitElements(driver, l);
-
-            LandingPage la = l.OpenApplication();
-            PageFactory.InitElements(driver, la);
-
-            la.Login();
+            //LaunchingPage l = new LaunchingPage(driver,test);
+            //PageFactory.InitElements(driver, l);
 
             //LandingPage la = l.OpenApplication();
             //PageFactory.InitElements(driver, la);
-            
+
+            //la.Login();
+
+            //LandingPage la = l.OpenApplication();
+            //PageFactory.InitElements(driver, la);
+
             //HomePage hp =  la.Login();
             //PageFactory.InitElements(driver, hp);
             //hp.Packages();
@@ -41,12 +49,13 @@ namespace BDTPoM.TestCases
 
         }
 
-        public void EndTest()
-        {
-            extent.EndTest(test);
-            extent.Flush();
-            extent.Close();
+        //[TearDown]
+        //public void EndTest()
+        //{
+        //    extent.EndTest(test);
+        //    extent.Flush();
+        //    extent.Close();
 
-        }
+        //}
     }
 }

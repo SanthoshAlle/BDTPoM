@@ -10,9 +10,9 @@ namespace BDTPoM
 {
     public class BasePage
     {
-        public IWebDriver driver;
+        public static IWebDriver driver;
 
-        public ExtentTest test;
+        public static ExtentTest test;
 
     }
 }
