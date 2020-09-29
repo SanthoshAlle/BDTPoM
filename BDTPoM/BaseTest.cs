@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using BDTPoM.Utility;
 using System.Diagnostics.Eventing.Reader;
+using RelevantCodes.ExtentReports;
 
 namespace BDTPoM
 {
     public class BaseTest : BasePage
     {
-        Public ExtentReports extent = ExtentManager.getInstance();
+        public ExtentReports extent = ExtentManager.getInstance();
 
         public void Setup(string browser)
         {
 
-            test.log(LogStatus.Info, "Chrome should be opened");
-
-
-            if (browser == "Chrome")
+            test.Log(LogStatus.Info, "Chrome should be opened");
+             if (browser == "Chrome")
             {
 
                 driver = new ChromeDriver();

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;

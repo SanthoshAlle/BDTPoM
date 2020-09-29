@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,10 @@ namespace BDTPoM.Pages
 {
     public class HomePage : BasePage
     {  
-        public HomePage (IWebDriver driver)
+        public HomePage (IWebDriver driver, ExtentTest test)
         {
             this.driver = driver;
+            this.test = test;
         }
 
     [FindsBy(How = How.LinkText, Using = "Packages")]

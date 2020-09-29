@@ -24,9 +24,12 @@ namespace BDTPoM.TestCases
             Setup("Chrome");
 
             LaunchingPage l = new LaunchingPage(driver,test);
-
             PageFactory.InitElements(driver, l);
-            l.OpenApplication();
+
+            LandingPage la = l.OpenApplication();
+            PageFactory.InitElements(driver, la);
+
+            la.Login();
 
             //LandingPage la = l.OpenApplication();
             //PageFactory.InitElements(driver, la);

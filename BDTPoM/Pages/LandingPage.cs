@@ -6,28 +6,30 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
+using RelevantCodes.ExtentReports;
 
 namespace BDTPoM.Pages
 {
     public class LandingPage : BasePage
     {
-        public LandingPage (IWebDriver driver)
+        public LandingPage(IWebDriver driver, ExtentTest test)
         {
             this.driver = driver;
+            this.test = test;
         }
-
-        [FindsBy(How = How.ClassName, Using = "Login")]
+        [FindsBy(How = How.LinkText, Using = "Login")]
         public IWebElement Loginbutton;
+       
 
+        [FindsBy(How = How.ClassName, Using = "signInUsername")]
+        public IWebElement username;
 
         [FindsBy(How = How.ClassName, Using = "signInPassword")]
         public IWebElement password;
 
 
-        //check value for username
-
-        [FindsBy(How = How.ClassName, Using = "signInUsername")]
-        public IWebElement username;
+    
 
         public HomePage Login()
         {
@@ -41,7 +43,7 @@ namespace BDTPoM.Pages
             password.SendKeys("Dotnet");
             password.SendKeys(Keys.Enter);
 
-            HomePage hp = new HomePage(driver);
+            HomePage hp = new HomePage(driver, test);
             PageFactory.InitElements(driver, hp);
             return hp;
         }
